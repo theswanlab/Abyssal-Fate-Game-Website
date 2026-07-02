@@ -242,20 +242,20 @@ body {
             var(--color-purple) 55.5%,
             var(--color-purple) 100%
         ),
-        url(images/abyssal-fate-mobile-bg.webp) top center / 145% no-repeat;
+        url(images/abyssal-fate-mobile-bg.webp) top center / 160% no-repeat;
     }
     .main-text {
         width: 100%;
-        font-size: 15px;
+        font-size: 10px;
         margin: 0 1.5rem 1.8rem 0;
         gap: 10px;
     }
     .main-text h1 {
-        width: 50%;
+        width: 80%;
     }
     .main-text a {
         width: 40%;
-        font-size: 16px;
+        font-size: 15px;
     }
     .game-des {
         background: url(images/main-mobile-bg.webp) center no-repeat;
@@ -278,7 +278,7 @@ body {
     }
     .socials-section a {
         width: 90%;
-        font-size: 14px;
+        font-size: 10px;
         padding: 1rem;
     }
     a:active {
