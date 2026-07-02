@@ -259,7 +259,7 @@ body {
         background: var(--color-dark-lavender);
         font-size: 10px;
         justify-content: center;
-        padding: 2rem;
+        padding: 0 3rem 2rem 2rem;
         min-height: 55vh;
         position: static;
         margin: 0;
