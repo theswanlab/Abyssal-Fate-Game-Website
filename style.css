@@ -13,6 +13,11 @@
     --color-light-black: rgba(0, 0, 0, 0.7);
 }
 
+::selection {
+    background: var(--color-light-lavender);
+    color: var(--color-white);
+}
+
 body {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     width: 100%;
@@ -39,7 +44,7 @@ body {
         var(--color-purple) 60.5%,
         var(--color-purple) 100%
     ),
-    url(images/abyssal-fate-bg.webp) left center / 100% auto no-repeat;
+    url(images/abyssal-fate-bg.webp) left center / 110% auto no-repeat;
 }
 
 .main-image {
@@ -53,7 +58,7 @@ body {
     gap: 20px;
     color: var(--color-white);
     z-index: 2;
-    margin-right: 6rem;
+    padding-right: 5%;
 }
 
 .main-text p {
@@ -63,8 +68,8 @@ body {
 }
 
 .main-text h1 {
-    font-size: 40px;
-    width: 25%;
+    font-size: clamp(1.5rem, 2.5rem);
+    width: 20%;
 }
 
 .main-text a {
@@ -72,7 +77,8 @@ body {
     box-shadow: 4px 4px 0 var(--color-dark-lavender);
     padding: 1rem;
     color: var(--color-white);
-    width: 11%;
+    width: fit-content;
+    min-width: 150px;
     font-weight: 700;
     font-size: 15px;
     text-align: center;
@@ -99,6 +105,7 @@ body {
     background: url(images/main-bg.webp) no-repeat;
     background-size: 100%;
     background-attachment: fixed;
+    overflow: hidden;
     z-index: 1;
 }
 
@@ -114,8 +121,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-align: justify;
     color: var(--color-white);
-    width: 55%;
+    width: 60%;
     font-size: 17px;
     font-weight: 600;
     padding: 2rem 3rem;
@@ -135,6 +143,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow: hidden;
 }
 
 .game-gallary h3 {
@@ -146,6 +155,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .grid-seven {
@@ -158,8 +169,8 @@ body {
     border: 3px solid var(--color-purple);
     padding: 1rem;
     font-weight: 500;
-    width: 350px;
-    height: 188px;
+    width: 300px;
+    height: 173px;
     cursor: pointer;
     transition: border 0.2s ease;
 }
@@ -256,20 +267,21 @@ body {
         background-size: cover;
     }
     .main-text {
-        background: var(--color-dark-lavender);
+        background: var(--color-purple);
         font-size: 10px;
         justify-content: center;
         padding: 0 3rem 2rem 2rem;
         min-height: 55vh;
         position: static;
         margin: 0;
-        gap: 10px;
+        gap: 20px;
     }
     .main-text h1 {
-        width: 80%;
+        width: 60%;
+        font-size: 35px;
     }
     .main-text a {
-        width: 50%;
+        width: 40%;
         font-size: 15px;
         margin-right: 4rem;
     }
