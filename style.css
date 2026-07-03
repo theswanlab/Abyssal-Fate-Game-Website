@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-purple: hsl(291, 24%, 50%);
+    --color-light-lavender: hsl(256, 34%, 74%);
+    --color-dark-lavender: hsl(291, 34%, 40%);
+    --color-blue: hsl(234, 70%, 77%);
+    --color-light-black: rgba(0, 0, 0, 0.7);
+}
+
+::selection {
+    background: var(--color-light-lavender);
+    color: var(--color-white);
+}
+
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-section::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 60%,
+        var(--color-purple) 60.5%,
+        var(--color-purple) 100%
+    ),
+    url(images/abyssal-fate-bg.webp) left center / 110% auto no-repeat;
+}
+
+.main-image {
+    display: none;
+}
+
+.main-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--color-white);
+    z-index: 2;
+    padding-right: 5%;
+}
+
+.main-text p {
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--color-light-lavender);
+}
+
+.main-text h1 {
+    font-size: clamp(1.5rem, 2.5rem);
+    width: 20%;
+}
+
+.main-text a {
+    background: var(--color-light-lavender);
+    box-shadow: 4px 4px 0 var(--color-dark-lavender);
+    padding: 1rem;
+    color: var(--color-white);
+    width: fit-content;
+    min-width: 150px;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    margin-right: 6rem;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.main-text a:last-of-type {
+    margin-right: 10rem;
+}
+
+.main-text a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-dark-lavender);
+}
+
+.game-des {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: url(images/main-bg.webp) no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.game-des::before {
+    content: '';
+    inset: 0;
+    position: absolute;
+    background-color: var(--color-light-black);
+}
+
+.des-text {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+    color: var(--color-white);
+    width: 60%;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 2rem 3rem;
+    border: 2px solid var(--color-purple);
+    background: var(--color-dark-lavender);
+    margin: 6rem 0;
+}
+
+.des-text h2,
+.des-text span {
+    color: var(--color-light-lavender);
+}
+
+.game-gallary {
+    z-index: 3;
+    color: var(--color-light-lavender);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.game-gallary h3 {
+    font-size: 25px;
+}
+
+.scenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.grid-seven {
+    grid-column-start: 2;
+}
+
+.scene {
+    break-inside: avoid;
+    background: var(--color-dark-lavender);
+    border: 3px solid var(--color-purple);
+    padding: 1rem;
+    font-weight: 500;
+    width: 300px;
+    height: 173px;
+    cursor: pointer;
+    transition: border 0.2s ease;
+}
+
+.scene:hover {
+    border: 3px solid var(--color-blue);
+}
+
+.one {
+    background: url(images/gallary-photo-one.webp) center no-repeat;
+    background-size: 100%;
+}
+
+.two {
+    background: url(images/gallary-photo-two.webp) center no-repeat;
+    background-size: 100%;
+}
+
+.three {
+    background: url(images/gallary-photo-three.webp) center no-repeat;
+    background-size: 100%;
+}
+
+.four {
+    background: url(images/gallary-photo-four.webp) center no-repeat;
+    background-size: 100%;
+}
+
+.five {
+    background: url(images/gallary-photo-five.webp) center no-repeat;
+    background-size: 100%;
+}
+
+.six {
+    background: url(images/gallary-photo-six.webp) center no-repeat;
+    background-size: 100%;
+}
+
+.seven {
+    background: url(images/gallary-photo-seven.webp) center no-repeat;
+    background-size: 100%;
+}
+
+.socials-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 4rem;
+    z-index: 4;
+}
+
+.socials-section h4 {
+    color: var(--color-light-lavender);
+    font-size: 30px;
+}
+
+.socials-section a {
+    text-decoration: none;
+    font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+    background: var(--color-light-lavender);
+    font-size: 12px;
+    box-shadow: 4px 4px 0 var(--color-dark-lavender);
+    padding: 15px;
+    text-align: center;
+    width: 95%;
+    color: var(--color-purple);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.socials-section a:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-dark-lavender);
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        position: static;
+    }
+    .main-section::before {
+        background: none;
+        display: none;
+    }
+    .main-image {
+        display: block;
+        margin-bottom: -1rem;
+    }
+    .main-image img {
+        width: 100%;
+        object-fit: cover;
+        min-height: 50vh;
+        background-size: cover;
+    }
+    .main-text {
+        background: var(--color-purple);
+        font-size: 10px;
+        justify-content: center;
+        padding: 0 3rem 2rem 2rem;
+        min-height: 55vh;
+        position: static;
+        margin: 0;
+        gap: 20px;
+    }
+    .main-text h1 {
+        width: 60%;
+        font-size: 35px;
+    }
+    .main-text a {
+        width: 40%;
+        font-size: 15px;
+        margin-right: 4rem;
+    }
+    .main-text a:last-of-type {
+        margin-right: 8rem;
+    }
+    .game-des {
+        background: url(images/main-mobile-bg.webp) center no-repeat;
+        background-attachment: fixed;
+    }
+    .des-text {
+        font-size: 18px;
+        padding: 1.5rem;
+        width: 100%;
+    }
+    .scenes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .scene {
+        width: 300px;
+        height: 176px;
+    }
+    .socials-section a {
+        width: 90%;
+        font-size: 10px;
+        padding: 1rem;
+    }
+    a:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-dark-lavender);
+    }
+}
